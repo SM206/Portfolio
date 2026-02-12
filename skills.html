@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Sanjana Manjar</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Base Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{transition:background 0.5s,color 0.5s;font-family:'Open Sans',sans-serif;}
+body.dark{background:#111;color:#f5f5f5;}
+body.light{background:#f5f5f5;color:#111;}
+
+/* Header & Menu */
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,0.05);backdrop-filter:blur(5px);}
+header h1{font-family:'Montserrat Alternates',sans-serif;font-size:1.8rem;letter-spacing:1px;}
+nav a{margin-left:1rem;text-decoration:none;color:inherit;font-weight:600;transition:0.3s;font-size:1rem;}
+nav a:hover{color:#ff6600;}
+
+/* Container */
+.container{max-width:900px;margin:auto;padding:2rem;text-align:center;}
+
+/* Section Titles */
+.section-title{font-family:'Montserrat Alternates',sans-serif;font-size:1.6rem;margin-bottom:2rem;}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.7rem 1.5rem;margin:-2rem 0;border-radius:6px;background:#ff6600;color:#fff;font-weight:700;font-family:'Montserrat Alternates',sans-serif;transition:0.3s;text-decoration:none;}
+.btn:hover{background:#e65c00;}
+
+/* Cards Layout */
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:2rem;}
+.card{padding:1.5rem;border-radius:12px;background: rgba(255,255,255,0.05);backdrop-filter:blur(5px);transition:transform 0.3s;width:260px;text-align:center;}
+.card:hover{transform:translateY(-8px);}
+.card h3{font-family:'Montserrat Alternates',sans-serif;font-size:1.2rem;margin-bottom:0.7rem;}
+.card p{font-size:0.95rem;line-height:1.5;margin-bottom:0.7rem;color:#ccc;}
+.card img{width:100%;border-radius:8px;margin-top:0.5rem;}
+
+/* Footer */
+footer{text-align:center;margin-top:3rem;font-size:0.85rem;color:gray;}
+
+/* Responsive */
+@media(max-width:600px){
+  header{flex-direction:column;align-items:center;}
+  nav{margin-top:0.5rem;}
+  nav a{margin:0.5rem;}
+  .cards{flex-direction:column;width:100%;}
+  .card{width:90%;}
+}
+</style>
+</head>
+<body class="dark">
+
+<header>
+  <h1>Sanjana Manjar</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="writing.html">Writing</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <section class="section" id="skills">
+
+    
+    <div class="section-title">Art, Project, Writing & Designing</div>
+
+    <div class="cards">
+      <!-- Art Card -->
+      <div class="card">
+        <h3>Lippan Art</h3>
+        <p>Traditional Lippan artwork, blending texture and creativity.</p>
+        <img src="img/a1.jpeg" alt="Lippan Art">
+      </div>
+
+      <div class="card">
+        <h3>Mandala Art</h3>
+        <p>Intricate Mandala designs, showcasing symmetry and precision.</p>
+        <img src="img/a2.jpeg" alt="Mandala Art">
+      </div>
+
+      <!-- AI/DS Skills -->
+      <div class="card">
+        <h3>AI & Data Science Project</h3>
+        <p>Sentiment Analysis, Machine Learning, Python, Data Visualization.</p>
+        <img src="img/a3.jpg" alt="AI & Data Science">
+      </div>
+
+      <!-- Writing Skills -->
+      <div class="card">
+        <h3>Writing</h3>
+        <p>Poems, poetries, and short stories reflecting creativity and expression. A refreshment of the soul.</p>
+        <img src="img/a4.jpg" alt="Writing Art">
+      </div>
+
+      <div class="card">
+        <h3>Logo Design</h3>
+        <p>Creating unique and memorable logos for businesses, brands and personal projects.</p>
+        <img src="img/logo1.png" alt="Logo Design">
+      </div>
+
+      <div class="card">
+        <h3>Poster Design</h3>
+        <p>Designing eye-catching and informative posters for events, campaigns, and promotions.</p>
+        <img src="img/a5.png" alt="Poster Design">
+      </div>
+      
+    </div>
+
+    <a href="writing.html" class="btn">View My Writing</a>
+    
+  </section>
+</div>
+
+<footer>© 2026 Sanjana Manjar. All rights reserved.</footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing | Sanjana Manjar</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Base Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{transition:background 0.5s,color 0.5s;font-family:'Open Sans',sans-serif;}
+body.dark{background:#111;color:#f5f5f5;}
+body.light{background:#f5f5f5;color:#111;}
+
+/* Header & Menu */
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,0.05);backdrop-filter:blur(5px);}
+header h1{font-family:'Montserrat Alternates',sans-serif;font-size:1.8rem;letter-spacing:1px;}
+nav a{margin-left:1rem;text-decoration:none;color:inherit;font-weight:600;transition:0.3s;font-size:1rem;}
+nav a:hover{color:#ff6600;}
+
+/* Container */
+.container{max-width:900px;margin:auto;padding:2rem;text-align:center;}
+
+/* Section Titles */
+.section-title{font-family:'Montserrat Alternates',sans-serif;font-size:1.6rem;margin-bottom:2rem;}
+
+/* Cards Layout */
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:2rem;}
+.card{padding:1.5rem;border-radius:12px;background: rgba(255,255,255,0.05);backdrop-filter:blur(5px);transition:transform 0.3s;width:260px;text-align:center;}
+.card:hover{transform:translateY(-8px);}
+.card h3{font-family:'Montserrat Alternates',sans-serif;font-size:1.2rem;margin-bottom:0.7rem;}
+.card p{font-size:0.95rem;line-height:1.5;margin-bottom:0.7rem;color:#ccc;}
+.card a{display:inline-block;margin-top:0.5rem;padding:0.5rem 1rem;background:#ff6600;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;transition:0.3s;}
+.card a:hover{background:#e65c00;}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.7rem 1.5rem;margin:1rem 0;border-radius:6px;background:#ff6600;color:#fff;font-weight:700;font-family:'Montserrat Alternates',sans-serif;transition:0.3s;text-decoration:none;}
+.btn:hover{background:#e65c00;}
+
+/* Footer */
+footer{text-align:center;margin-top:-2rem;font-size:0.85rem;color:gray;}
+
+/* Responsive */
+@media(max-width:600px){
+  header{flex-direction:column;align-items:center;}
+  nav{margin-top:0.5rem;}
+  nav a{margin:0.5rem;}
+  .cards{flex-direction:column;width:100%;}
+  .card{width:90%;}
+}
+</style>
+</head>
+<body class="dark">
+
+<header>
+  <h1>Sanjana Manjar</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="writing.html">Writing</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <section class="section" id="writing">
+    <div class="section-title">Writing Portfolio</div>
+    <div class="cards">
+
+      <!-- Poem Card -->
+      <div class="card">
+        <h3>Poem: It's God's Plan</h3>
+        <p>A playful, heartfelt poem full of gratitude and joy.</p>
+        <a href="writing/poem.txt" download>Download TXT</a>
+      </div>
+
+      <!-- Short Story Card -->
+      <div class="card">
+        <h3>Short Story: A Proposal from Heaven</h3>
+        <p>An emotional narrative capturing memories and love.</p>
+        <a href="writing/story.txt" download>Download TXT</a>
+      </div>
+
+      <!-- Another Poem -->
+      <div class="card">
+        <h3>Poetry: Chained in Gold, Broken in Silence</h3>
+        <p>A deeply emotional poetry exploring themes of love, loss, and resilience.</p>
+        <a href="writing/poetry.txt" download>Download TXT</a>
+      </div>
+
+      <a href="projects.html" class="btn">View My Projects</a>
+
+    </div>
+  </section>
+</div>
+
+<footer>© 2026 Sanjana Manjar. All rights reserved.</footer>
+
+</body>
+</html>

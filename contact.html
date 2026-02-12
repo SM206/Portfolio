@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Sanjana Manjar</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Base Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{transition:background 0.5s,color 0.5s;font-family:'Open Sans',sans-serif;}
+body.dark{background:#111;color:#f5f5f5;}
+body.light{background:#f5f5f5;color:#111;}
+
+/* Header & Menu */
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,0.05);backdrop-filter:blur(5px);}
+header h1{font-family:'Montserrat Alternates',sans-serif;font-size:1.8rem;letter-spacing:1px;}
+nav a{margin-left:1rem;text-decoration:none;color:inherit;font-weight:600;transition:0.3s;font-size:1rem;}
+nav a:hover{color:#ff6600;}
+
+/* Container */
+.container{max-width:800px;margin:auto;padding:2rem;text-align:center;}
+
+/* Section Titles */
+.section-title{font-family:'Montserrat Alternates',sans-serif;font-size:1.6rem;margin-bottom:1.5rem;}
+
+/* Social Links */
+.socials a{display:block;font-weight:bold;margin:0.5rem 0;color:#cd3333;text-decoration:none;transition:0.3s;font-size:1rem;}
+.socials a:hover{color:#ff6600;}
+
+/* Contact Form */
+form{margin-top:2rem;text-align:left;}
+form label{display:block;margin-bottom:0.3rem;font-weight:600;}
+form input, form textarea{
+  width:100%;
+  padding:0.6rem 0.8rem;
+  margin-bottom:1rem;
+  border-radius:6px;
+  border:none;
+  background:rgba(255,255,255,0.05);
+  color:#f5f5f5;
+  font-family:'Open Sans',sans-serif;
+}
+form input::placeholder, form textarea::placeholder{color:#ccc;}
+
+form button{
+  padding:0.7rem 1.5rem;
+  background:#ff6600;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  font-family:'Montserrat Alternates',sans-serif;
+}
+form button:hover{background:#e65c00;}
+
+/* Success Message */
+#successMsg{
+  display:none;
+  color:#00ff99;
+  margin-top:10px;
+  font-weight:bold;
+}
+
+/* Footer */
+footer{text-align:center;margin-top:-2rem;font-size:0.85rem;color:gray;}
+
+/* Responsive */
+@media(max-width:600px){
+  header{flex-direction:column;align-items:center;}
+  nav{margin-top:0.5rem;}
+  nav a{margin:0.5rem;}
+  form input, form textarea{font-size:0.95rem;}
+  form button{width:100%;padding:0.7rem;}
+}
+</style>
+</head>
+
+<body class="dark">
+
+<header>
+  <h1>Sanjana Manjar</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="writing.html">Writing</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <section id="contact">
+    <div class="section-title">Get in Touch</div>
+    <p>If you’d like to collaborate, discuss projects, or just say hi—feel free to message me.</p>
+
+    <!-- Social links -->
+    <div class="socials">
+      <a href="mailto:sanjanamanjar20@gmail.com">📧 sanjanamanjar20@gmail.com</a>
+      <a href="https://instagram.com/_words_of_sm" target="_blank">📷 Instagram: @_words_of_sm</a>
+    </div>
+
+    <!-- Contact Form (Formspree Connected) -->
+    <form id="contactForm" action="https://formspree.io/f/xzdaezea" method="POST">
+      
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="successMsg">Message sent successfully 💌 I’ll reply soon.</p>
+
+  </section>
+</div>
+
+<footer>© 2026 Sanjana Manjar. All rights reserved.</footer>
+
+<script>
+const form = document.getElementById("contactForm");
+const successMsg = document.getElementById("successMsg");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      successMsg.style.display = "block";
+      form.reset();
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
